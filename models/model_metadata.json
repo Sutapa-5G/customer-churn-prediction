@@ -1,0 +1,217 @@
+{
+  "model_name": "XGBoost",
+  "selection_metric": "roc_auc_mean",
+  "selection_criterion": "Highest mean ROC-AUC across stratified 5-fold cross-validation on the training set. ROC-AUC is chosen because it is threshold-independent and robust to the class imbalance present in this dataset, unlike accuracy. Selection uses cross-validation results only; the test set plays no part.",
+  "training_date_utc": "2026-10-02T04:44:32.333204+00:00",
+  "random_state": 42,
+  "test_size": 0.2,
+  "cv_n_splits": 5,
+  "selected_threshold": 0.4,
+  "threshold_selection_method": "Maximised F1 over out-of-fold cross-validated predictions on the training set.",
+  "original_feature_names": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "numerical_features": [
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges"
+  ],
+  "categorical_features": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "n_transformed_features": 45,
+  "best_hyperparameters": {
+    "classifier__subsample": 0.7,
+    "classifier__n_estimators": 200,
+    "classifier__max_depth": 3,
+    "classifier__learning_rate": 0.05,
+    "classifier__colsample_bytree": 1.0
+  },
+  "baseline_cv_results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy_mean": 0.75648123486015,
+      "accuracy_std": 0.01275569301651382,
+      "precision_mean": 0.5276742960088012,
+      "precision_std": 0.016727643893579842,
+      "recall_mean": 0.7866220735785954,
+      "recall_std": 0.03744624749773487,
+      "f1_mean": 0.6313955331355922,
+      "f1_std": 0.02100293373515392,
+      "roc_auc_mean": 0.8449827002801633,
+      "roc_auc_std": 0.01304970307146741
+    },
+    {
+      "model": "Random Forest",
+      "accuracy_mean": 0.7848802444755801,
+      "accuracy_std": 0.01038024035953307,
+      "precision_mean": 0.5834112142119594,
+      "precision_std": 0.018561155137904982,
+      "recall_mean": 0.6635451505016723,
+      "recall_std": 0.021425575087688234,
+      "f1_mean": 0.6207750003588484,
+      "f1_std": 0.017607359459368577,
+      "roc_auc_mean": 0.838725488156209,
+      "roc_auc_std": 0.00805824497924809
+    },
+    {
+      "model": "XGBoost",
+      "accuracy_mean": 0.7889628227536285,
+      "accuracy_std": 0.011701194393139016,
+      "precision_mean": 0.6087656013605194,
+      "precision_std": 0.027388033135621916,
+      "recall_mean": 0.5765886287625418,
+      "recall_std": 0.017773017064329693,
+      "f1_mean": 0.5919650066659156,
+      "f1_std": 0.01856930865563467,
+      "roc_auc_mean": 0.8300376829294525,
+      "roc_auc_std": 0.009197326324895849
+    }
+  ],
+  "tuned_cv_results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy_mean": 0.7554164611245687,
+      "accuracy_std": 0.014936122242993228,
+      "precision_mean": 0.5262668433106892,
+      "precision_std": 0.019320183072077363,
+      "recall_mean": 0.7846153846153847,
+      "recall_std": 0.03857624309109356,
+      "f1_mean": 0.6298056406410454,
+      "f1_std": 0.024179297680812548,
+      "roc_auc_mean": 0.8450383722846881,
+      "roc_auc_std": 0.013279100209375025
+    },
+    {
+      "model": "Random Forest",
+      "accuracy_mean": 0.777957639152657,
+      "accuracy_std": 0.009156867230555098,
+      "precision_mean": 0.563340599505686,
+      "precision_std": 0.015083497346684056,
+      "recall_mean": 0.7290969899665551,
+      "recall_std": 0.025294542342727835,
+      "f1_mean": 0.6353295591519721,
+      "f1_std": 0.01416860212895708,
+      "roc_auc_mean": 0.8433617142163531,
+      "roc_auc_std": 0.008607304200030344
+    },
+    {
+      "model": "XGBoost",
+      "accuracy_mean": 0.7919795240669439,
+      "accuracy_std": 0.009797489851833234,
+      "precision_mean": 0.5949131304369223,
+      "precision_std": 0.016112860393872195,
+      "recall_mean": 0.676923076923077,
+      "recall_std": 0.028504716725969905,
+      "f1_mean": 0.6331247782023673,
+      "f1_std": 0.019749405668551195,
+      "roc_auc_mean": 0.8460059156193633,
+      "roc_auc_std": 0.011646666349562745
+    }
+  ],
+  "test_results_default_threshold": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.7366926898509581,
+      "precision": 0.5025380710659898,
+      "recall": 0.7941176470588235,
+      "f1": 0.6155440414507772,
+      "roc_auc": 0.839419773179364,
+      "tn": 741,
+      "fp": 294,
+      "fn": 77,
+      "tp": 297
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7629524485450674,
+      "precision": 0.5404858299595142,
+      "recall": 0.713903743315508,
+      "f1": 0.6152073732718893,
+      "roc_auc": 0.8373491952775841,
+      "tn": 808,
+      "fp": 227,
+      "fn": 107,
+      "tp": 267
+    },
+    {
+      "model": "XGBoost",
+      "accuracy": 0.772888573456352,
+      "precision": 0.5594713656387665,
+      "recall": 0.679144385026738,
+      "f1": 0.6135265700483091,
+      "roc_auc": 0.8424087421529878,
+      "tn": 835,
+      "fp": 200,
+      "fn": 120,
+      "tp": 254
+    }
+  ],
+  "selected_model_test_metrics_at_0.50": {
+    "model": "XGBoost @0.50",
+    "accuracy": 0.772888573456352,
+    "precision": 0.5594713656387665,
+    "recall": 0.679144385026738,
+    "f1": 0.6135265700483091,
+    "roc_auc": 0.8424087421529878,
+    "tn": 835,
+    "fp": 200,
+    "fn": 120,
+    "tp": 254
+  },
+  "selected_model_test_metrics_at_selected_threshold": {
+    "model": "XGBoost @0.40",
+    "accuracy": 0.7643718949609652,
+    "precision": 0.5388888888888889,
+    "recall": 0.7780748663101604,
+    "f1": 0.6367614879649891,
+    "roc_auc": 0.8424087421529878,
+    "tn": 786,
+    "fp": 249,
+    "fn": 83,
+    "tp": 291
+  },
+  "class_balance": {
+    "train": {
+      "0": 4139,
+      "1": 1495
+    },
+    "test": {
+      "0": 1035,
+      "1": 374
+    }
+  }
+}

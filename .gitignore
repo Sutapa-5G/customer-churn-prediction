@@ -1,0 +1,67 @@
+# =============================================================================
+# Customer Churn Prediction — .gitignore
+#
+# Portfolio-project policy (documented, not default-blind):
+#
+# 1. DATASET (data/raw/Telco-Customer-Churn.csv) — TRACKED, not ignored.
+#    Reasoning: this is the public IBM Telco Customer Churn benchmark
+#    (~950 KB, no personal/sensitive data beyond a customerID identifier),
+#    already widely mirrored on GitHub. Committing it lets anyone clone the
+#    repo and run the notebooks/app immediately, without hunting for the
+#    file or guessing which mirror was used. Trade-off: slightly larger
+#    repo; acceptable given the file's small size.
+#
+# 2. TRAINED MODEL (models/churn_model.pkl) — TRACKED, not ignored.
+#    Reasoning: the Streamlit app depends on this file to run without
+#    retraining. Committing it means a recruiter/reviewer can run
+#    `streamlit run app/app.py` right after cloning. Trade-off: binary
+#    diffs in git history if retrained; acceptable at ~850 KB for a
+#    single-owner portfolio repo. (In a team/production setting this would
+#    instead go through a model registry or release asset, not git.)
+#
+# 3. FIGURES & REPORT TABLES (reports/) — TRACKED, not ignored.
+#    These are portfolio evidence (EDA plots, confusion matrices, ROC
+#    curves, SHAP plots, CV/test result tables) that the README references
+#    directly. A reviewer should see them on GitHub without running any
+#    code.
+#
+# 4. Processed data (data/processed/) is INTENTIONALLY EMPTY and stays
+#    that way — see Step 3: no globally-fit transformed dataset is ever
+#    saved there, since reusing one for modeling would reintroduce leakage.
+#    The folder + .gitkeep are tracked so the project structure is visible.
+# =============================================================================
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# Environment variables / secrets
+.env
+
+# Keep data/processed/ empty except for its placeholder (see policy note above)
+data/processed/*
+!data/processed/.gitkeep

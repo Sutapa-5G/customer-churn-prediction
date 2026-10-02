@@ -1,0 +1,46 @@
+feature,mean_abs_shap,mean_shap,original_feature,category
+cat__Contract_Month-to-month,0.68811363,-0.1441981,Contract,Month-to-month
+num__tenure,0.41719812,-0.13088216,tenure,
+cat__OnlineSecurity_No,0.32714868,-0.10967488,OnlineSecurity,No
+cat__InternetService_Fiber optic,0.21889152,-0.062626556,InternetService,Fiber optic
+cat__PaymentMethod_Electronic check,0.21212812,-0.08290351,PaymentMethod,Electronic check
+cat__TechSupport_No,0.19462931,-0.06340826,TechSupport,No
+num__MonthlyCharges,0.15737727,-0.04986887,MonthlyCharges,
+cat__PaperlessBilling_No,0.13613339,-0.05802061,PaperlessBilling,No
+cat__Contract_Two year,0.13458467,-0.052947663,Contract,Two year
+cat__StreamingMovies_Yes,0.11363162,-0.034455013,StreamingMovies,Yes
+cat__Dependents_No,0.09987162,-0.05575904,Dependents,No
+cat__OnlineBackup_No,0.09666333,-0.03308774,OnlineBackup,No
+cat__StreamingTV_Yes,0.079677984,-0.03544627,StreamingTV,Yes
+num__TotalCharges,0.07793584,-0.014262676,TotalCharges,
+cat__MultipleLines_No,0.075174905,-0.020687995,MultipleLines,No
+cat__Contract_One year,0.045197222,-0.024128359,Contract,One year
+cat__InternetService_DSL,0.03711303,0.014133866,InternetService,DSL
+cat__MultipleLines_Yes,0.028787738,-0.014965481,MultipleLines,Yes
+cat__PaperlessBilling_Yes,0.02864928,-0.012843638,PaperlessBilling,Yes
+cat__PaymentMethod_Credit card (automatic),0.028350815,-0.021340322,PaymentMethod,Credit card (automatic)
+cat__DeviceProtection_No,0.022712167,-0.013650937,DeviceProtection,No
+cat__gender_Female,0.02226598,-0.011502068,gender,Female
+cat__StreamingTV_No,0.019326722,0.01803208,StreamingTV,No
+cat__StreamingMovies_No,0.0163432,0.015362757,StreamingMovies,No
+cat__PaymentMethod_Mailed check,0.012255149,-0.01132513,PaymentMethod,Mailed check
+cat__PaymentMethod_Bank transfer (automatic),0.011789711,-0.007646287,PaymentMethod,Bank transfer (automatic)
+cat__OnlineBackup_Yes,0.011544066,-0.0035730875,OnlineBackup,Yes
+cat__Partner_No,0.01050211,-0.007106103,Partner,No
+cat__DeviceProtection_Yes,0.010076825,-0.00799999,DeviceProtection,Yes
+cat__Dependents_Yes,0.009038707,-0.0033770408,Dependents,Yes
+cat__gender_Male,0.008693472,-0.0049550952,gender,Male
+cat__OnlineSecurity_Yes,0.0035480487,-0.0018386692,OnlineSecurity,Yes
+cat__Partner_Yes,0.0032312875,-0.0014120402,Partner,Yes
+cat__TechSupport_Yes,0.0027933046,-0.002074483,TechSupport,Yes
+num__SeniorCitizen,0.002223485,-4.4150347e-05,SeniorCitizen,
+cat__PhoneService_Yes,0.0017475676,-0.00037341288,PhoneService,Yes
+cat__PhoneService_No,0.0011838148,-0.0004045207,PhoneService,No
+cat__TechSupport_No internet service,0.0,0.0,TechSupport,No internet service
+cat__DeviceProtection_No internet service,0.0,0.0,DeviceProtection,No internet service
+cat__OnlineBackup_No internet service,0.0,0.0,OnlineBackup,No internet service
+cat__OnlineSecurity_No internet service,0.0,0.0,OnlineSecurity,No internet service
+cat__InternetService_No,0.0,0.0,InternetService,No
+cat__MultipleLines_No phone service,0.0,0.0,MultipleLines,No phone service
+cat__StreamingMovies_No internet service,0.0,0.0,StreamingMovies,No internet service
+cat__StreamingTV_No internet service,0.0,0.0,StreamingTV,No internet service

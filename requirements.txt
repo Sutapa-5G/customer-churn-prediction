@@ -1,0 +1,26 @@
+# Exact versions validated during this project's development and testing
+# (all notebooks and scripts executed successfully with these versions).
+pandas==3.0.2
+numpy==2.4.4
+matplotlib==3.10.8
+seaborn==0.13.2
+scikit-learn==1.8.0
+xgboost==3.4.1
+imbalanced-learn==0.14.2
+shap==0.52.0
+streamlit==1.64.0
+joblib==1.5.3
+ipywidgets==8.1.9
+
+# Notebook execution: this project's notebooks were built and executed
+# programmatically via nbformat/nbclient (the versions below are what was
+# actually validated). The `jupyter` metapackage itself (needed only if you
+# want to run `jupyter notebook` interactively) was not separately installed
+# or version-pinned during development, so it is left as a minimum version
+# rather than an exact pin to avoid asserting a validated version that
+# wasn't actually tested.
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.3.0
+jupyter_client==8.10.0
+jupyter>=1.0.0

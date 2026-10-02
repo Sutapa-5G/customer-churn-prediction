@@ -1,0 +1,8 @@
+﻿*.pkl binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.csv binary
+*.ipynb binary
+
+* text=auto eol=lf
